@@ -7,7 +7,7 @@ matrix:
     install:
     - sudo apt-get install liblzo2-dev
     - sudo apt-get install zlib1g-dev
-    - pip install .
+    - pip install . --no-binary :all
     script:
     - remap-gff3.py -a example_file/alignment.gff3 -t_fa example_file/target.fa -q_fa
       example_file/query.fa -dir output -tmp_ID -g example_file/example1.gff3 example_file/example2.gff3
